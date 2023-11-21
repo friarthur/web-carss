@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Cars</title>
+     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        body {
+           
+            margin: 0;
+            padding: 0;           
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #ffffff, #000000);
+            
+        }
+
+        nav {
+
+
+            background-color: rgb(51, 51, 196);
+        }
+
+        ul {
+            list-style-type: none;
+            display: inline-flex;
+
+        }
+
+        li {
+            margin-left: 170px;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 7px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: white;
+            color: black;
+        }
+        .nameLogo{
+           margin-left: 616px;
+    color: white;
+    font-size: xx-large;
+    font-style: italic; 
+           
+        }
+
+
+        
+        .product-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-card {
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #1877f2;
+}
+footer{
+ text-align: end;
+ justify-items: end;
+}        
+#btn-aceitar {
+    background-color: #1877f2; /* Cor azul semelhante ao Facebook */
+    color: #fff; /* Cor do texto branca */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 25px; /* Borda arredondada */
+}
+/* Estilo do modal */
+#modal-politica-cookies {
+    display: none;
+    position: fixed;
+    bottom: 0; /* Fixa o modal na parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Sombra acima do modal */
+    border-radius: 10px;
+    z-index: 1000;
+    width: 80%; /* Largura do modal */
+    max-width: 400px; /* Largura máxima do modal */
+    border: 1px solid black;
+}
+
+#contatos {
+            text-align: center;
+            margin-top: 50px; /* Espaçamento superior */
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .contato {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contato i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .contato p {
+            margin: 0;
+        }
+
+contat{
+    color: black;
+}
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+       
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="#">Home</a></li>
+            <li><i class="fas fa-car"></i><a href="carros.html">Carros</a></li>
+            <li><i class="fas fa-envelope"></i><a href="#">Contatos</a></li>
+            <li><i class="far fa-newspaper"></i><a href="blog.html">Blog</a></li>
+        </ul>
+
+    </nav>
+    
+       
+    <h1 style="color: #ffffff; font-family: Arial, Helvetica, sans-serif ; size: 15px; text-align: center; margin-top: 5%;" >WEB CARS</h1>
+    
+        <div class="product-row">
+            <div class="product-card">                
+                <img src="s6.png" alt="Toyota Supra 2019">
+                <h3>Toyota Supra 2019</h3>
+                <p>Preço: R$42,500</p>
+                <a href="supra.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="s2.png" alt="Mustang 2017">
+                <h3>Mustang 2017</h3>
+                <p>Preço: R$320,000</p>
+                <a href="mustang.htm"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="s3.png" alt="Nissan GT-R">
+                <h3>Nissan GT-R</h3>
+                <p>Preço: R$900,000</p>
+                <a href="gtr.htm"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        </div>
+        
+        <div class="product-row">
+            <div class="product-card">
+                <img src="s4.png" alt="Chevrolet Corvette 2016">
+                <h3>Chevrolet Corvette 2016</h3>
+                <p>Preço: R$400,000</p>
+                <a href="corvertte.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="s5.png" alt="Porsche 911 Carrera">
+                <h3>Porsche 911 Carrera</h3>
+                <p>Preço: R$799,000</p>
+                <a href="porscher.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="s7.png" alt="Mazda RX-7">
+                <h3>Mazda RX-7</h3>
+                <p>Preço: R$51,859</p>
+                <a href="madza.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        </div>
+
+         <div id="modal-politica-cookies">
+        <p>Informações importantes sobre nossa política de cookies:</p>
+        <!-- Adicione suas informações sobre a política de cookies aqui -->
+        <p>Utilizamos cookies para melhorar a sua experiência. Ao continuar a navegar, você concorda com o uso de cookies.</p>
+        <!-- Botões "Aceitar" e "Fechar" -->
+        <button id="btn-aceitar" onclick="aceitarCookies()">Aceitar</button>
+        <button id="btn-fechar" onclick="fecharModal()">Fechar</button>
+    </div>
+       
+    <div id="contatos">
+        <h2>Contatos</h2>
+
+        <!-- Contato do WhatsApp -->
+        <div class="contato">
+            <i class="fab fa-whatsapp"></i>
+            <p style="color: white;">WhatsApp:<a href="#" target="_blank">(51) 98317-2705</a> </p>
+        </div>
+
+        <!-- Contato do Instagram -->
+        <div class="contato">
+            <i class="fab fa-instagram"></i>
+            <p style="color: white;">Instagram: <a class="contat" href="https://www.instagram.com/Ar7hurr_022" target="_blank">@Ar7hurr_022</a>
+        </div>
+
+        <!-- Contato de E-mail -->
+        <div class="contato">
+            <i class="far fa-envelope"></i>
+            <p style="color:white;">E-mail: <a class="contat" href="https://mail.google.com/mail/u/1/?hl=pt-BR#inbox">arthurfriburgo234@gmail.com</a></p>
+        </div>
+    </div> 
+    <footer>
+        <div id="cookieConsent" class="cookie-consent">
+            <p>Este site utiliza cookies para oferecer a melhor experiência. Ao continuar a navegar, você concorda com o uso de cookies.</p>
+            <button onclick="consentToCookies()">Aceitar Cookies</button>
+        </div>
+
+        <p style="color: white;">© 2023 Web Cars. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Seu código JavaScript aqui
+
+        function verMais(carro) {
+            // Certifique-se de que carro não é indefinido
+            if (carro) {
+                // Redirecionar para a página do carro correspondente
+                window.location.href = carro + 'supra.html';
+            }
+        }
+
+        // Restante do seu código...
+    });
+
+       // Função para definir o consentimento de cookies
+function consentToCookies() {
+    // Define um cookie de consentimento que expira em 30 dias
+    document.cookie = "cookieConsent=accepted; expires=" + new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000).toUTCString();
+    
+    // Oculta a barra de consentimento
+    document.getElementById("cookieConsent").style.display = "none";
+}
+
+// Verifica se o usuário já deu consentimento
+function checkCookieConsent() {
+    const consentCookie = document.cookie.split(";").find(cookie => cookie.includes("cookieConsent"));
+
+    if (!consentCookie) {
+        // Se o cookie de consentimento não existe, exibe a barra de consentimento
+        document.getElementById("cookieConsent").style.display = "block";
+    }
+}
+
+// Verifica o consentimento quando a página é carregada
+window.onload = checkCookieConsent;
+
+       
+    </script>
+
+</body>
+
+</html>

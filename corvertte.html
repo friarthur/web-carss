@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Cars - Covert...</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #ffffff);
+
+        }
+
+        nav {
+
+
+            background-color: rgb(51, 51, 196);
+        }
+
+        ul {
+            list-style-type: none;
+            display: inline-flex;
+
+        }
+
+        li {
+            margin-left: 170px;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 7px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        h3 {
+            color: #ffffff;
+            font-size: larger;
+        }
+
+        .imgFist {
+            float: inline-start;
+            inline-size: 133%;
+            margin-inline-start: 105px;
+            border: 1px solid gray;
+            margin-block-start: 126px;
+            block-size: 120%;
+            width: 594px;
+        }
+
+        .product {
+            margin-inline-start: 750px;
+            color: white;
+            font-size: 25px;
+            margin-block-start: 150px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #1877f2;
+            color: #ffffff;
+            border-radius: 7px;
+        }
+
+        button:hover {
+            background-color: lightgreen;
+        }
+
+        footer {
+            text-align: end;
+            justify-items: end;
+            margin-top: 35%;
+            color: #000000;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            color: #000000;
+        }
+
+        .popup-content {
+            text-align: center;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="index.htm">Home</a></li>
+            <li><i class="fas fa-car"></i><a href="carros.html">Carros</a></li>
+            <li><i class="fas fa-envelope"></i><a href="#">Contatos</a></li>
+            <li><i class="far fa-newspaper"></i><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <div>
+
+        <img src="s4.png" alt="Main Image" class="imgFist">
+    </div>
+
+
+    <div class="product">
+        <h2>Covertte 2016</h2>
+        <p>O Chevrolet Corvette 2016 é puro desempenho. Com um motor de 3.8 litros e injeção multiponto, produz
+            incríveis 572 cv de potência e 65 kgmf de torque (Gasolina). Alcançando uma velocidade máxima de 315 km/h
+            (Gasolina) e uma aceleração de 0 a 100 km/h, este carro oferece uma experiência de direção emocionante. Seu
+            câmbio de dupla embreagem manual sequencial com modo automático de 6 marchas proporciona trocas suaves. O
+            Corvette 2016 é a escolha definitiva para quem busca desempenho e estilo excepcionais</p>
+        <p class="sale">Preço: R$400,000</p>
+        <button onclick="exibirPopup()">Comprar</button>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p>Compra realizada com sucesso!</p>
+                <button onclick="voltarParaIndex()">Voltar para a página inicial</button>
+            </div>
+        </div>
+        <footer>
+            <h6>© 2023 Web Cars. Todos os direitos reservados.</h6>
+        </footer>
+        <script>
+            function exibirPopup() {
+                var popup = document.getElementById('popup');
+                popup.style.display = 'block';
+            }
+
+            // Função para voltar para a página inicial
+            function voltarParaIndex() {
+                window.location.href = 'index.htm';
+            }
+
+            // Chamando a função de exibir o popup quando o botão de compra é clicado
+            document.querySelector('button').addEventListener('click', exibirPopup);
+        </script>
+</body>
+
+</html>

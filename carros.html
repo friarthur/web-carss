@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Cars</title>
+     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        body {
+           
+            margin: 0;
+            padding: 0;           
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #ffffff);
+            
+        }
+
+        nav {
+
+
+            background-color: rgb(51, 51, 196);
+        }
+
+        ul {
+            list-style-type: none;
+            display: inline-flex;
+
+        }
+
+        li {
+            margin-left: 170px;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 7px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: white;
+            color: black;
+        }
+        .nameLogo{
+           margin-left: 616px;
+    color: white;
+    font-size: xx-large;
+    font-style: italic; 
+           
+        }
+
+
+        
+        .product-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-card {
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #1877f2;
+}
+footer{
+ text-align: end;
+ justify-items: end;
+}        
+#btn-aceitar {
+    background-color: #1877f2; /* Cor azul semelhante ao Facebook */
+    color: #fff; /* Cor do texto branca */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 25px; /* Borda arredondada */
+}
+/* Estilo do modal */
+#modal-politica-cookies {
+    display: none;
+    position: fixed;
+    bottom: 0; /* Fixa o modal na parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Sombra acima do modal */
+    border-radius: 10px;
+    z-index: 1000;
+    width: 80%; /* Largura do modal */
+    max-width: 400px; /* Largura máxima do modal */
+    border: 1px solid black;
+}
+
+/* ... outros estilos ... */
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="index.htm">Home</a></li>
+            <li><i class="fas fa-car"></i><a href="carros.html">Carros</a></li>
+            <li><i class="fas fa-envelope"></i><a href="#">Contatos</a></li>
+            <li><i class="far fa-newspaper"></i><a href="blog.html">Blog</a></li>
+        </ul>
+
+    </nav>
+   
+    
+        <div class="product-row">
+            <div class="product-card">                
+                <img src="Lancer.png" alt="lancer">
+                <h3>Mitsubishi lancer 2016</h3>
+                <p>Preço: R$66,000</p>
+                <a href="lance.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="i8.png" alt="i8">
+                <h3>BMW I8</h3>
+                <p>Preço: R$900,000</p>
+                <a href="bmw.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="camaro.png" alt="camaro">
+                <h3>CHEVROLET CAMARO ZL1</h3>
+                <p>Preço: R$225,000</p>
+                <a href="camaro.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        </div>
+        
+        <div class="product-row">
+            <div class="product-card">
+                <img src="audi.png" alt="Audi r8">
+                <h3>Audi R8</h3>
+                <p>Preço: R$1,530,000</p>
+                <a href="audi.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="mercedes.png" alt="Porsche 911 Carrera">
+                <h3>Mercedes gt 69s</h3>
+                <p>Preço: R$1,699,000</p>
+                <a href="mercedes.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="skyline.png" alt="syiline">
+                <h3>Skyline r34</h3>
+                <p>Preço: R$36,759</p>
+                <a href="skyline.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        </div>
+        <div class="product-row">
+            <div class="product-card">
+                <img src="demon.png" alt="demon">
+                <h3>Dodger Demon</h3>
+                <p>Preço: R$580,000</p>
+                <a href="demon.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="honda.png" alt="Hondar">
+                <h3>Honda Civic typer 2016</h3>
+                <p>Preço: R$459,000</p>
+                <a href="honda.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        
+            <div class="product-card">
+                <img src="mclaren.png" alt="Mazda RX-7">
+                <h3>Mclaren P1</h3>
+                <p>Preço: R$2,500,000</p>
+                <a href="mclaren.html"><button onclick="verMais()">Ver Mais</button></a>
+            </div>
+        </div>
+
+
+         <div id="modal-politica-cookies">
+        <p>Informações importantes sobre nossa política de cookies:</p>
+        <!-- Adicione suas informações sobre a política de cookies aqui -->
+        <p>Utilizamos cookies para melhorar a sua experiência. Ao continuar a navegar, você concorda com o uso de cookies.</p>
+        <!-- Botões "Aceitar" e "Fechar" -->
+        <button id="btn-aceitar" onclick="aceitarCookies()">Aceitar</button>
+        <button id="btn-fechar" onclick="fecharModal()">Fechar</button>
+    </div>
+       
+      
+    <footer>
+        <p>© 2023 Web Cars. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Seu código JavaScript aqui
+
+        function verMais(carro) {
+            // Certifique-se de que carro não é indefinido
+            if (carro) {
+                // Redirecionar para a página do carro correspondente
+                window.location.href = carro + 'supra.html';
+            }
+        }
+
+        // Restante do seu código...
+    });
+
+       // Função para criar o cookie de aceitação
+        function criarCookieAceitacao() {
+            criarCookie("aceitacao_cookies", "true", 365);
+        }
+
+        // Função para verificar se o cookie de aceitação existe
+        function verificarAceitacaoCookies() {
+            return lerCookie("aceitacao_cookies") === "true";
+        }
+
+        // Função para exibir o modal de política de cookies
+        function exibirModalPoliticaCookies() {
+            var modal = document.getElementById("modal-politica-cookies");
+            modal.style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            var modal = document.getElementById("modal-politica-cookies");
+            modal.style.display = "none";
+        }
+
+        // Função chamada ao clicar no botão "Aceitar"
+        function aceitarCookies() {
+            criarCookieAceitacao();
+            fecharModal();
+        }
+
+        // Verificar a aceitação dos cookies ao carregar a página
+        if (!verificarAceitacaoCookies()) {
+            exibirModalPoliticaCookies();
+        }
+       
+    </script>
+
+</body>
+
+</html>
